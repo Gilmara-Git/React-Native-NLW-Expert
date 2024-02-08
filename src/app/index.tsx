@@ -4,15 +4,23 @@ import { Header } from '@/components/header';
 import { CATEGORIES, MENU } from '@/utils/data/products';
 import { CategoryButton } from "@/components/category-button";
 import { Product } from '@/components/product';
+import { Link } from 'expo-router';
+import { useCartStore } from '@/stores/cart-store';
 
 
 export default function Home() {
+  const cardStore = useCartStore();
+
   const[ category, setCategory ] = useState('');
   const sectionListRef = useRef<SectionList>(null);
 
+
+  const cartQuantityItems = cardStore.products.reduce((total, currentProduct) => total + currentProduct.quantity, 0);
+
+
   function handleSelectedCategory(categorySelected: string){
     setCategory(categorySelected);
-    
+
     const sectionIndex = CATEGORIES.findIndex(categoryItem => categoryItem === categorySelected );
     
     if(sectionListRef.current){
@@ -28,7 +36,7 @@ export default function Home() {
 
   return (
     <View className="flex-1 pt-8">
-      <Header title='Place your order' cartQuantity={1} />
+      <Header title='Place your order' cartQuantity={cartQuantityItems} />
       <FlatList 
         data={CATEGORIES}
         keyExtractor={(item)=>item}
@@ -48,7 +56,9 @@ export default function Home() {
         stickySectionHeadersEnabled={false}
         renderItem={({item})=>
         (
-          <Product data={item}/>
+          <Link href={`/productDetails/${item.id}`} asChild>
+            <Product data={item}/>
+          </Link>
           )}
           renderSectionHeader={({ section: {title}})=>(
             <Text 
