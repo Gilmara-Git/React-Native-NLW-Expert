@@ -40,15 +40,16 @@ Figma Layout:
 - Expo Vector icons
 - AsyncStorage
 - Zustand for global state management
-- Tailwindcss + Nativewind
+- Tailwindcss + Nativewind for styling
 - clsx (lib that allows to use conditional styles on tailwindcss)
 - KeyboardAwareScrollView (helps the keyboard on iOS to push the input up)
 - WhatsApp message forwarding
 
 
 # App creation
-Project was created using **npx create-expo-app**
-**yarn** as package management
+- Project was created using **npx create-expo-app**
+- **yarn** as package management
+
 # To run the project
 
 - Clone it
