@@ -7,9 +7,6 @@ Figma Layout:
 
 <img src="https://github.com/Gilmara-Git/React-Native-NLW-Expert/assets/66445234/4b07ed3c-2907-4092-b59a-da9f1e6846dd" alt="layout">
 
-<!-- <img src="https://ik.imagekit.io/cnbmdh4b9w/69b0144ee8de4b7093bad97c23831077-ezgif.com-video-to-gif-converter_Df7m2XV1Q.gif?updatedAt=1707792966012" alt='Gif'>
-   -->
-
 
   <img src="https://github.com/Gilmara-Git/React-Native-NLW-Expert/assets/66445234/49654636-df13-4e97-b402-caacd0cbe7b0" alt='gif'>
 
